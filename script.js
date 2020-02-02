@@ -258,6 +258,8 @@ function codeLatLng(lat, lng) {
                         if (results[0].address_components[i].types[b] == "locality") {
                             //this is the object you are looking for
                             currentCity = results[0].address_components[i].long_name;
+				
+			console.log(currentCity);
                             break;
                         }
                     }
