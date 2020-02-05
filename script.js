@@ -10,7 +10,7 @@ function initialize()
     function showPosition(position) {
         latitude = position.coords.latitude;
         longitude = position.coords.longitude;
-        url = 'https://api.darksky.net/forecast/' + apiKey + '/' + latitude + ',' + longitude + '?lang=' + lang + '&exclude=minutely&units=' + units;
+        url = baseUrl + apiKey + '/' + latitude + ',' + longitude + '?lang=' + selectedLang + '&exclude=minutely&units=' + selectedUnits;
         getForecast()
         console.log(latitude);
 
@@ -27,7 +27,20 @@ function initialize()
 	getForecast();
 	
 	var t = setInterval(showDateTime, 500);
-	var f = setInterval(getForecast, 300000);
+    var f = setInterval(getForecast, 300000);
+    
+    //Change listener on the language settings.
+    $('input[name="language"]').on('change', function(){
+        updateDashbrd('language', $('input[name="language"]:checked').val());
+    });
+    //Change listener on the time settings.
+    $('input[name="time"]').on('change', function(){
+        updateDashbrd('timeFormat', $('input[name="time"]:checked').val());
+    });
+    //Change listener on the units settings.
+    $('input[name="units"]').on('change', function(){
+        updateDashbrd('units', $('input[name="units"]:checked').val());
+    });
 }
 
 function getForecast(){
@@ -128,12 +141,12 @@ function showForecast(days) {
     $("#forecastTitles").html('<th></th>' + titles.join(""));
     $("#forecastIcons").html('<td></td>' + icons.join(""));
     $("#forecastSummaries").html('<td></td>' + summaries.join(""));
-    $("#forecastMaxTemps").html('<td><div class="vertical">max</div></td>' + maxTemps.join(""));
-    $("#forecastMinTemps").html('<td><div class="vertical">min</div></td>' + minTemps.join(""));
-    $("#forecastWind").html('<td><div class="vertical">wind</div></td>' + winds.join(""));
-    $("#forecastHumidity").html('<td><div class="vertical">rh</div></td>' + humidities.join(""));
-    $("#forecastPrecipitations").html('<td><div class="vertical">prob</div></td>' + precipitations.join(""));
-    $("#forecastAccumulations").html('<td><div class="vertical">acc</div></td>' + accumulations.join(""));
+    $("#forecastMaxTemps").html('<td><div class="vertical">' + maxLabel + '</div></td>' + maxTemps.join(""));
+    $("#forecastMinTemps").html('<td><div class="vertical">' + minLabel + '</div></td>' + minTemps.join(""));
+    $("#forecastWind").html('<td><div class="vertical">' + windLabel + '</div></td>' + winds.join(""));
+    $("#forecastHumidity").html('<td><div class="vertical">' + rhLabel + '</div></td>' + humidities.join(""));
+    $("#forecastPrecipitations").html('<td><div class="vertical">' + probLabel + '</div></td>' + precipitations.join(""));
+    $("#forecastAccumulations").html('<td><div class="vertical">' + accLabel + '</div></td>' + accumulations.join(""));
 
     var width = Math.floor(100 / forecastNbOfDays);
     $("#forecast td").css('width', width + '%');
@@ -250,7 +263,7 @@ function codeLatLng(lat, lng) {
             if (results[0]) {
                 //formatted address
                 console.log(results[0].address_components)
-                //find country name
+                //find city name
                 for (var i = 0; i < results[0].address_components.length; i++) {
                     for (var b = 0; b < results[0].address_components[i].types.length; b++) {
                         
@@ -258,16 +271,11 @@ function codeLatLng(lat, lng) {
                         if (results[0].address_components[i].types[b] == "locality") {
                             //this is the object you are looking for
                             currentCity = results[0].address_components[i].long_name;
-				
-			console.log(currentCity);
                             break;
                         }
                     }
                 }
-                //city data
-                //alert(city.short_name + " " + city.long_name)
             } else {
-                //alert("No results found");
                 city = {
                     short_name: "No city found!",
                     long_name: "No city found!"
@@ -277,4 +285,48 @@ function codeLatLng(lat, lng) {
             alert("Geocoder failed due to: " + status);
         }
     });
+}
+
+function updateDashbrd(type, selectedValue){
+    switch(type){
+        case 'language':
+            selectedLang = selectedValue;
+            //Update url
+            url = baseUrl + apiKey + '/' + latitude + ',' + longitude + '?lang=' + selectedLang + '&exclude=minutely&units=' + selectedUnits;
+            getForecast();
+            // Set Language for labels.
+            todayLabel = langLabels[selectedLang].todayLabel;
+            windLabel = langLabels[selectedLang].windLabel;
+            apparentTempLabel = langLabels[selectedLang].apparentTempLabel;
+            week = langLabels[selectedLang].week;
+            month = langLabels[selectedLang].month;
+            maxLabel = langLabels[selectedLang].maxLabel;
+            minLabel = langLabels[selectedLang].minLabel;
+            windLabel = langLabels[selectedLang].windLabel;
+            rhLabel = langLabels[selectedLang].rhLabel;
+            accLabel = langLabels[selectedLang].accLabel;
+            probLabel = langLabels[selectedLang].probLabel;
+            break;
+        case 'timeFormat':
+            updateTimeFormat(selectedValue)
+            break;
+        case 'units':
+            selectedUnits = selectedValue;
+            //Update url
+            url = baseUrl + apiKey + '/' + latitude + ',' + longitude + '?lang=' + selectedLang + '&exclude=minutely&units=' + selectedUnits;
+            getForecast();
+            //Set Units
+            degreeSymbol = unitLabels[selectedUnits].degreeSymbol;
+            rainPrecUnit = unitLabels[selectedUnits].rainPrecUnit;
+            snowPrecUnit = unitLabels[selectedUnits].snowPrecUnit;
+            windUnit = unitLabels[selectedUnits].windUnit;
+            break;
+        default:
+            break;
+    }    
+}
+
+function updateTimeFormat(timeFormat){
+    //12Hr
+    //24Hr
 }
