@@ -60,16 +60,46 @@
     </table>
     <table id="controls" cellspacing="0">
         <tr id="controlsTitles">
-            <th>Units</th>
             <th>Time Format</th>
+            <th>Units</th>
+            <th>Desired Language</th>
         </tr>
         <tr id="">
-            <td><input type="radio" name="units">Metric</input></td>
-            <td><input type="radio" name="time-format">12 Hour</input></td>
+            <td>
+                <label>12 Hr
+                    <input type="radio" name="time" value="12Hr" checked="checked"/>
+                </label>
+                <label>24 Hr
+                    <input type="radio" name="time" value="24Hr"/>
+                </label>
+            </td>
+            <td>
+                <label>Metric
+                    <input type="radio" name="units" value="si" checked="checked"/>
+                </label>
+                <label>Imperial
+                    <input type="radio" name="units" value="us"/>
+                </label>
+            </td>
+            <td>
+                <label>English
+                    <input type="radio" name="language" value="en" checked="checked"/>
+                </label>
+                <label>French
+                    <input type="radio" name="language" value="fr"/>
+                </label>
+                <label>Korean
+                    <input type="radio" name="language" value="ko"/>
+                </label>
+                <label>German
+                    <input type="radio" name="language" value="de"/>
+                </label>
+            </td>
         </tr>
         <tr id="">
-            <td><input type="radio" name="units">Imperial</input></td>
-            <td><input type="radio" name="time-format">24 Hour</input></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
     </table>
     <div id="darkSkyLink" style="width:100%; text-align:center; padding-top:10px"><a href="https://darksky.net/poweredby/">Powered by Dark Sky</a></div>
