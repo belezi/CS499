@@ -99,8 +99,13 @@ function showCurrent(current, summary) {
 function showDateTime() {
     var now = new Date();
     $("#currentCity").text(currentCity);
-	$("#currentDate").text(week[now.getDay()] + ', ' + now.getDate() + ' ' + month[now.getMonth()]);
-	$("#currentTime").text(now.getHours() + (now.getMinutes() < 10 ? ":0" : ":") + now.getMinutes());
+    $("#currentDate").text(week[now.getDay()] + ', ' + now.getDate() + ' ' + month[now.getMonth()]);
+    
+    if(timeFormat == '24Hr'){
+        $("#currentTime").text(now.getHours() + (now.getMinutes() < 10 ? ":0" : ":") + now.getMinutes());
+    }else{
+        $("#currentTime").text((now.getHours() > 12 ? (now.getHours() - 12) : now.getHours()) + (now.getMinutes() < 10 ? ":0" : ":") + now.getMinutes() + (now.getHours() > 12 ? " PM" : " AM" ) );
+    }
 }
 
 function showForecast(days) {
@@ -308,7 +313,8 @@ function updateDashbrd(type, selectedValue){
             probLabel = langLabels[selectedLang].probLabel;
             break;
         case 'timeFormat':
-            updateTimeFormat(selectedValue)
+            timeFormat = selectedValue;
+            showDateTime();
             break;
         case 'units':
             selectedUnits = selectedValue;
@@ -324,9 +330,4 @@ function updateDashbrd(type, selectedValue){
         default:
             break;
     }    
-}
-
-function updateTimeFormat(timeFormat){
-    //12Hr
-    //24Hr
 }

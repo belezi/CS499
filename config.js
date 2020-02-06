@@ -5,6 +5,7 @@ var longitude = "-73.5906905";
 var currentCity = "Montreal";
 var selectedLang = "en"; // too many options.  check here https://darksky.net/dev/docs/forecast
 var selectedUnits = "si"; // auto, ca, uk2, us, si
+var timeFormat = "12Hr";
 
 var unitLabels = {
     "si" : {
