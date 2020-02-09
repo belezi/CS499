@@ -3,7 +3,7 @@
     height: 100%;
     padding: 0;
     margin: 0;
-    overflow:hidden;
+    /* overflow:hidden; */
 }
 
 html {
@@ -367,8 +367,3 @@ body {
 .icon-thunderstormnight  { background: url(icons/tstorms.svg), linear-gradient(transparent, transparent); }
 .icon-windnight  { background: url(icons/wind.svg), linear-gradient(transparent, transparent); }
 .icon-unknownnight  { background: url(icons/unknown.svg), linear-gradient(transparent, transparent); }
-
-
-
-
-

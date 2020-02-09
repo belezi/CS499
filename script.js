@@ -159,6 +159,7 @@ function showForecast(days) {
 }
 
 function showHourlyForecast(hourlyForecasts) {
+    currentShownHrs = [];
     var hours = [];
     var icons = [];
     var temps = [];
@@ -175,7 +176,7 @@ function showHourlyForecast(hourlyForecasts) {
         dateTime.setUTCSeconds(hourly.time);
         var dayDate = dateTime.setHours(dateTime.getHours(), 0, 0, 0);
         if (dayDate >= now || debugging) {
-            hours.push("<th>" + dateTime.getHours() + ":00</th>");
+            hours.push("<th>" + hourlyForecastTimes(dateTime) + "</th>");
             if (showHourlyIcon){icons.push('<td><i class="' + getIconClass(hourly.icon, true) + '"></i></td>');}
             temps.push('<td>' + Math.round(hourly.temperature) + '°</td>');
             winds.push('<td>' + getWind(hourly.windSpeed, hourly.windBearing, showHourlyWindBearing) + '</td>');
@@ -314,7 +315,9 @@ function updateDashbrd(type, selectedValue){
             break;
         case 'timeFormat':
             timeFormat = selectedValue;
-            showDateTime();
+            getForecast();
+            //showDateTime();
+            //hourlyForecastTimes(timeFormat);
             break;
         case 'units':
             selectedUnits = selectedValue;
@@ -330,4 +333,14 @@ function updateDashbrd(type, selectedValue){
         default:
             break;
     }    
+}
+
+function hourlyForecastTimes(dtTime){
+    if(timeFormat == '12Hr'){
+        console.log(dtTime.getHours());
+        console.log(parseInt(dtTime.getHours()) > 11);
+        return ( (dtTime.getHours() > 11) ? ((dtTime.getHours() - 12) + "PM") : (dtTime.getHours() + "AM") );
+    }else{
+        return dtTime.getHours() + ":00";
+    }
 }
