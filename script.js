@@ -53,8 +53,7 @@ function getSettings(){
             console.log(data);
         },
         error: function (error) {
-            console.log("An error occurred." + error);
-            debugger;
+            console.log("An error occurred." + json_encode(error));
         }
     });
 }
