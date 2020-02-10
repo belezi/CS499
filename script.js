@@ -42,6 +42,22 @@ function initialize()
         updateDashbrd('units', $('input[name="units"]:checked').val());
     });
 }
+getSettings();
+function getSettings(){
+    $.ajax({
+        type: 'GET',
+        url: 'weatherAPI.php',
+        cache: false,
+        dataType: "jsonp",
+        success: function (data) {
+            console.log(data);
+        },
+        error: function () {
+            console.log("An error occurred.");
+            debugger;
+        }
+    });
+}
 
 function getForecast(){
 	$.ajax({
@@ -337,8 +353,6 @@ function updateDashbrd(type, selectedValue){
 
 function hourlyForecastTimes(dtTime){
     if(timeFormat == '12Hr'){
-        console.log(dtTime.getHours());
-        console.log(parseInt(dtTime.getHours()) > 11);
         return ( (dtTime.getHours() > 11) ? ((dtTime.getHours() - 12) + "PM") : (dtTime.getHours() + "AM") );
     }else{
         return dtTime.getHours() + ":00";

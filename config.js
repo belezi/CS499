@@ -1,4 +1,4 @@
-﻿var baseUrl = 'https://api.darksky.net/forecast/';
+var baseUrl = 'https://api.darksky.net/forecast/';
 var apiKey = "f2aadc2fca4bf3e2834c9425e52b54bb"; // darksky.net api key
 var latitude = "45.536031"; // Showing Montreal. This will be the default city until the user gives permission for geolocation.
 var longitude = "-73.5906905";

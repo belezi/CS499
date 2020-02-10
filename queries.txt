@@ -1,0 +1,72 @@
+// Create Table Languages
+$sql = "CREATE TABLE Languages (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    label VARCHAR(30) NOT NULL,
+    value VARCHAR(2) NOT NULL
+)";
+// Populate Languages Table
+$sql = "INSERT INTO Languages VALUES 
+("English","en"),
+("French","fr"),
+("German","de"),
+("Korean","ko")";
+
+// Create Table Labels
+$sql = "CREATE TABLE Labels (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    labelName VARCHAR(30) NOT NULL
+)";
+// Populate Labels Table
+$sql = "INSERT INTO Labels VALUES 
+(null, 'maxLabel'),
+(null, 'minLabel'),
+(null, 'rhLabel'),
+(null, 'accLabel'),
+(null, 'probLabel'),
+(null, 'todayLabel'),
+(null, 'windLabel'),
+(null, 'apparentLabel'),
+(null, 'week'),
+(null, 'month')";
+
+// Create Table LanguageToLabel
+$sql = "CREATE TABLE LanguageToLabel (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    languageId INT(6) NOT NULL,
+    labelId INT(6) NOT NULL,
+    value VARCHAR(50) NOT NULL
+)";
+// Populate Labels Table
+$sql = "INSERT INTO LanguageToLabel VALUES 
+(null, 1, 1, 'Max'),
+(null, 1, 2, 'Min'),
+(null, 1, 3, 'Rh'),
+(null, 1, 4, 'Acc'),
+(null, 1, 5, 'Prob'),
+(null, 1, 6, 'Today'),
+(null, 1, 7, 'Wind'),
+(null, 1, 8, 'Feeling'),
+(null, 2, 1, 'Max'),
+(null, 2, 2, 'Le Min'),
+(null, 2, 3, 'Hum'),
+(null, 2, 4, 'Acc'),
+(null, 2, 5, 'Prob'),
+(null, 2, 6, 'Aujourd'hui'),
+(null, 2, 7, 'Vent'),
+(null, 2, 8, 'Sentiment'),
+(null, 3, 1, 'Max'),
+(null, 3, 2, 'Min'),
+(null, 3, 3, 'Feuch'),
+(null, 3, 4, 'Akk'),
+(null, 3, 5, 'Wahr'),
+(null, 3, 6, 'Heute'),
+(null, 3, 7, 'Wind'),
+(null, 3, 8, 'Gefühl'),
+(null, 4, 1, '맥스'),
+(null, 4, 2, '최소'),
+(null, 4, 3, '습기'),
+(null, 4, 4, '축적'),
+(null, 4, 5, '개연성'),
+(null, 4, 6, '오늘'),
+(null, 4, 7, '바람'),
+(null, 4, 8, '감각');
