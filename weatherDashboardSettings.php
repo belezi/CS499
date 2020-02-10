@@ -1,6 +1,8 @@
 <?php
     include 'config.php';
-echo "Hello World";
+
+    header('Content-type: application/json');
+
     // Create connection
     $conn = new mysqli($host, $username, $password, $dbname);
 
@@ -30,7 +32,6 @@ echo "Hello World";
         $return['message'] = "Could not retrieve data from the database";
     }
     
-    header('Content-type: application/json');
     echo json_encode($return) . "\n";
 
     $conn->close();
