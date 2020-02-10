@@ -46,14 +46,14 @@ getSettings();
 function getSettings(){
     $.ajax({
         type: 'GET',
-        url: 'weatherAPI.php',
+        url: 'weatherDashboardSettings.php',
         cache: false,
         dataType: "jsonp",
         success: function (data) {
             console.log(data);
         },
-        error: function () {
-            console.log("An error occurred.");
+        error: function (error) {
+            console.log("An error occurred." + error);
             debugger;
         }
     });
