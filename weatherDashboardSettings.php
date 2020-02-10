@@ -29,7 +29,8 @@
         $return['code'] = 400;
         $return['message'] = "Could not retrieve data from the database";
     }
-        
+    
+    header('Content-type: application/json');
     echo json_encode($return) . "\n";
 
     $conn->close();
