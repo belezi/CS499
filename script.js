@@ -1,5 +1,5 @@
 ﻿var hasAlerts;
-var baseUrlAPI = "https://belezi.github.io/";
+var baseUrlAPI = "http://3.85.128.121/";
 function initialize()
 {
     if (navigator.geolocation) {
@@ -45,9 +45,11 @@ function initialize()
 getSettings();
 function getSettings(){
     $.ajax({
-        type: 'GET',
+        type: 'POST',
         url: baseUrlAPI + 'weatherDashboardSettings.php',
         cache: false,
+        data: {"data":"test"},
+        dataType: "json",
         success: function (data) {
             console.log(data);
         },
