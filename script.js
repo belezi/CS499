@@ -45,7 +45,7 @@ function initialize()
 getSettings();
 function getSettings(){
     $.ajax({
-        type: 'GET',
+        type: 'POST',
         url: baseUrlAPI + 'weatherDashboardSettings.php',
         cache: false,
 	data: {"data":"test"},
