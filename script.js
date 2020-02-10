@@ -48,8 +48,6 @@ function getSettings(){
         type: 'POST',
         url: baseUrlAPI + 'weatherDashboardSettings.php',
         cache: false,
-	data: {"data":"test"},
-        dataType: "json",
         success: function (data) {
             console.log(data);
         },
