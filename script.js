@@ -1,5 +1,5 @@
 ﻿var hasAlerts;
-var baseUrlAPI = "belezi.github.io";
+var baseUrlAPI = "https://belezi.github.io/";
 function initialize()
 {
     if (navigator.geolocation) {
