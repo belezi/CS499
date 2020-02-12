@@ -1,4 +1,4 @@
-var baseUrl = 'https://api.darksky.net/forecast/';
+﻿var baseUrl = 'https://api.darksky.net/forecast/';
 var apiKey = "f2aadc2fca4bf3e2834c9425e52b54bb"; // darksky.net api key
 var latitude = "45.536031"; // Showing Montreal. This will be the default city until the user gives permission for geolocation.
 var longitude = "-73.5906905";
@@ -59,17 +59,17 @@ var langLabels = {
         week : ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
         month : ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"]
     },
-    "ko" : {
-        maxLabel : "맥스",
-        minLabel : "최소",
-        rhLabel : "습기",
-        accLabel : "축적",
-        probLabel : "개연성",
-        todayLabel : "오늘",
-        windLabel : "바람",
-        apparentTempLabel : "감각",
-        week : ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
-        month : ["일월", "이월", "삼월", "사월", "오월", "유월", "칠월", "팔월", "구월", "시월", "십일월", "십이월"]
+    "es" : {
+        maxLabel : "Max",
+        minLabel : "Min",
+        rhLabel : "Rh",
+        accLabel : "Acc",
+        probLabel : "Prob",
+        todayLabel : "Hoy",
+        windLabel : "Viento",
+        apparentTempLabel : "Sensacion",
+        week : ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'],
+        month : ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
     }
 }
 

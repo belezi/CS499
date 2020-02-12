@@ -51,7 +51,7 @@ function getSettings(){
         data: {"data":"test"},
         dataType: "json",
         success: function (data) {
-            console.log(data);
+            showSettings(data);
         },
         error: function (error) {
             console.log("An error occurred." + JSON.stringify(error));
@@ -357,4 +357,47 @@ function hourlyForecastTimes(dtTime){
     }else{
         return dtTime.getHours() + ":00";
     }
+}
+
+function showSettings(settingsData){
+    console.log(settingsData);
+    var titles = [
+        '<th>Time Format</th>',
+        '<th>Units</th>',
+        '<th>Desired Language</th>'
+    ];
+    var values = {
+        'languages' : [],
+        'units': [],
+        'time': []
+    };
+
+    $.each(settingsData.langLabels, function(id, obj){
+        values.languages.push("<label>"+obj.languageLabel+"<input type='radio' name='language' value='"+id+"'/></label>");
+    });
+    $.each(settingsData.unitLabels, function(id, val){
+        values.units.push("<label>"+id+"<input type='radio' name='units' value='"+val+"'/></label>");
+    });
+    $.each(settingsData.hourLabels, function(id, val){
+        values.time.push("<label>"+id+"<input type='radio' name='time' value='"+val+"'/></label>");
+    });
+
+    $("#controlsTitles").html(titles.join(""));
+
+    $("#controlsOptions").html("<td>"+values.time.join("")+"</td>\
+                                <td>"+values.units.join("")+"</td>\
+                                <td>"+values.languages.join("")+"</td>");
+
+    //Change listener on the language settings.
+    $('input[name="language"]').on('change', function(){
+        updateDashbrd('language', $('input[name="language"]:checked').val());
+    });
+    //Change listener on the time settings.
+    $('input[name="time"]').on('change', function(){
+        updateDashbrd('timeFormat', $('input[name="time"]:checked').val());
+    });
+    //Change listener on the units settings.
+    $('input[name="units"]').on('change', function(){
+        updateDashbrd('units', $('input[name="units"]:checked').val());
+    });
 }
