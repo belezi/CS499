@@ -3,7 +3,7 @@
 
 ### Introduction
 
-  Hi there, my name is Bilal Elezi and I am originally from Albania and now live in Boston, MA and work as a software engineer at one of the local healthcare-tech startup as well as pursuing my Bachelors Degree here at Southern New Hampshire University. On my free time i like to take walks by the ocean, play video games and spend time with my wife and friends.
+  Hi there, my name is Bilal Elezi, I am originally from Albania but now live in Boston, MA and work as a software engineer at one of the local healthcare-tech startup as well as pursuing my Bachelors Degree here at Southern New Hampshire University. On my free time i like to take walks by the ocean, play video games and spend time with my wife and friends.
 
 
 ### My Education 
@@ -41,6 +41,10 @@ The top three practices that I always stress during code review are documentatio
 ## Enhancements
 
 ### Software Design and Engineering
+
+  I have chosen the showcase my design and engineering skills with my weather dashboard artifact because i see a lot of oportunities where this project can be improved and enhanced. Initially i would enhance the artifact by setting adding the ability to load the weather dashboard for the current location where the end-user is instea of having the hardcoded value alone for a certain city. With that being said will also leave the defaul fallback values for the city of Montreal in place in case the end-user's devide geolocation is not available. 
+  
+  This process of Software Design and Engineering provided me with a clearer picture of what a software designer does and taught me how to view a project from an end-users perspective in order to come up with solutions that will benefit them.
 
 ### Algorithm and Data Structures
   
