@@ -63,7 +63,11 @@ This process of Software Design and Engineering provided me with a clearer pictu
 To view my artifact please follow this link [Weather Dashboard Artifact](https:/belezi.github.io/project/index.html)
 
 ### About the artifact
-The artifact that I have chosen is a Weather Dashboard that will provide the weather forecast for the end-user based on their location. This was an open-source project that I decided to enhance and add more features to.
+The artifact that I have chosen is a Weather Dashboard which provides the weather forecast for the end-user based on their location. This project was an open-source project that I saw the opportunity and decided to enhance and add more features to. The project is created initially a couple of years back and has been modified and enhanced during the course of January through February 2020.
+
+I included this artifact on my portfolio because it gave me the opportunity to enhance it and create a full end to end experience for the end-user and also showcase all the required skills in the process, for example, the auto-detection of the users location, the ability to pull the data dynamically from a relational database and the ability to work with open-source API's such as the Google Geolocation API and DarkSky API in order to pull the location's latitude, longitude, city or town name, and the weather forecast data respectively.
+
+While enhancing the artifact I learned a lot about the topics covered from the process such as software design, data structures, algorithms, and databases by doing a lot of hands-on. I learned how to consume Google's Geolocation API and also how to host an EC2 instance in AWS and leverage it for the MySQL database set up.
 
 
 
