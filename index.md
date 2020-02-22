@@ -12,6 +12,8 @@ For my capstone class project I have chosen to work on enhancing a weather dashb
 
 (https://youtu.be/Uj5XuvUyBDo)
 
+{% include youtube.html id="dQw4w9WgXcQ" width="850" height="375" %}
+
 ## Enhancement One
 
 ## Enhancement Two
