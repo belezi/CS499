@@ -1,28 +1,27 @@
 ﻿body {
-    background-color: #062845;
+    background-color: #000000;
     color: #fff;
 }
 
-#controls td,
-#controls th,
 #forecast td,
 #forecast th,
 #tableHourlyForecast td,
 #tableHourlyForecast th {
-    background-color: #073053;
+    background-color: #181818;
     border-left: 1px solid white;
     border-right: 1px solid white;
 }
 
-#forecast th, #controls th {
+#forecast td,
+#forecast th {
+    border-right: 1px solid white;
+}
+
+#forecast th {
     border-top: 1px solid white;
 }
 
 #forecast tr:last-child td {
-    border-bottom: 1px solid white;
-}
-
-#controls tr:last-child td {
     border-bottom: 1px solid white;
 }
 
@@ -41,5 +40,5 @@
 
 #alerts {
     background-color: red;
-    color: white;
+    color:white;
 }
