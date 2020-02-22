@@ -1,10 +1,13 @@
 
 ## Professional Self-Assesmnet 
 
-### Introduction
+### Introduction & Selected Artifact
 
   Hi there, my name is Bilal Elezi, I am originally from Albania but now live in Boston, MA and work as a software engineer at one of the local healthcare-tech startup as well as pursuing my Bachelors Degree here at Southern New Hampshire University. On my free time i like to take walks by the ocean, play video games and spend time with my wife and friends.
 
+  The artifact that I choose for my ePortfolio is an interactive weather dashboard. This open source project will output the hourly and daily weather forecast for any given location. For retrieving weather data i will leverage [DarkSky](https://darksky.net)'s API which can support several languages and the different units used throught the world.
+  
+  As far as software design/engineering I have decided to enhance my artifact by supporting both the Imperial and Metric systems, allowing for the dashboard to identify the location automatically on page load and display the weather data for that location. For the algorithms and data structures I will write general functions that will compute the current data shown for the weather to the desired measurement system based on the end user’s selection. For the database enhancements I will add all the labels for the units and languages on a relational MySQL database in order to have the user settign to be dynamic and database driven which will make it seamless on adding support for more languages in the future.
 
 ### My Education 
 
@@ -59,7 +62,14 @@ The top three practices that I always stress during code review are documentatio
 
 ## Finished Artifact
 
+### Link to my artifact
+
+To view my artifact please follow this link [Weather Dashboard Artifact](https:/belezi.github.io/project/index.html)
+
+### About the artifact
 The artifact that I have chosen is a Weather Dashboard that will provide the weather forecast for the end-user based on their location. This was an open-source project that I decided to enhance and add more features to.
-[My Artifact](https:/belezi.github.io/project/index.html)
+
+
+
 
 
