@@ -30,8 +30,11 @@ Becoming a part of the todays workforce takes a lot of energy and time however w
 
 ## Code Review Process
 
+### Code Review Walkthough Video
+
 [Code Review YouTube Link](https://youtu.be/6_0Om5FcPik)
 
+### The process of code review
 Code review is the process where us as developers go through our work and search for bugs, code correctness meaning if naming convention and coding standard are followed though the entire project. This process is a very important part of my job as a developer and I personally see it as a way of improving myself. Code reviews can be personal or on a group setting, which I prefer the most because your peers might have more insight on a certain language or framework, or they could learn a better way of approaching the problem. Most of the time as we near the completion of the feature or incremental being developed we schedule code reviews with our team and the lead developer introduces the problem, solution and the code architecture such as functions reused or created. 
 
 The top three practices that I always stress during code review are documentation, structure and efficiency. I am a strong advocate that any project or feature developed should be given to any developer and they should be able to understand it within an hour or two and hit the ground running. This is very important for both small and large teams and it ensures that if anything goes wrong there would be several developers able to debug the issue in record time. As far as structure I believe that breaking things down to the tiniest pieces and set them up to live independently of each other is good architecture as they can be reused and avoids repeated code in the project. Efficiency I think is something that every developer develops as they gain experience. There are always loops and iterations that all of us deal with on a daily basis however we don’t always think of the most cost-efficient ones and many times we end up with infinite loops that we are not proud of. 
