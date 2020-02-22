@@ -1,12 +1,12 @@
-## Introduction
-
-For my capstone class project I have chosen to work on enhancing a weather dashboard open source project that I took from GitHub [Weather Dashboard](https://github.com/vlaine/Weather-Forecast-Dashboard).
-
-
 
 ## Professional Self-Assesmnet 
 
-### Education 
+### Introduction
+
+  Hi there, my name is Bilal Elezi and I am originally from Albania and now live in Boston, MA and work as a software engineer at one of the local healthcare-tech startup as well as pursuing my Bachelors Degree here at Southern New Hampshire University. On my free time i like to take walks by the ocean, play video games and spend time with my wife and friends.
+
+
+### My Education 
 
   I started pursing my bachelor's degree at SNHU about 18 months ago. I have been working full time for almost four years as a software developer after having finishing my associates degree from Quincy College. While working at my current position and pursuing the Computer Science degree here at SNHU I have soaked a ton of information and knowledge related to the field which has led me into learning things i had no idea they existed before. 
 
@@ -16,7 +16,7 @@ Becoming a part of the todays workforce takes a lot of energy and time however w
 
   From the program here at SNHU i have learned a lot on different topics and skills that are essential for the industry such as data structures and algorithms, databases, design, QA and Automation. 
   
-  Data structures and algorithms course was my favourite because i learned a lot as to how the data and algorithms would make it possible for a program to run and function. I gained a deeper knowledge on algorithms and how to design them to be efficient and support the probplem at hand. 
+  Data structures and algorithms course was my favourite because i learned a lot as to how the data and algorithms would make it possible for a program to run and function. I gained a deeper knowledge on algorithms and how to design them to be efficient and support the problem at hand. 
   
   Data structure is also very important because the way how you handle different data points and how they are stored in memory enables one to write algorithms that are precise and concise, eliminating all unnecessary lines of code.
   
@@ -38,13 +38,21 @@ The top three practices that I always stress during code review are documentatio
 
 
 
-## Enhancement One
+## Enhancements
 
-## Enhancement Two
+### Software Design and Engineering
 
-## Enhancement Three
+### Algorithm and Data Structures
+  
+  The reason why I have included this artifact is that it empowers me to showcase my knowledge of algorithms and data structures. In order to achieve the end product, I will have to work with a lot of static and dynamic data points. I improved the artifact by adding the ability to set your own preferences on the units, time format, and language in which the dashboard and weather hourly and daily forecasts are displayed to the end-user. I believe that I have met the course objectives planned with this artifact and I gained a deeper understanding of algorithms and data structures along the process of enhancing my artifact.
 
+### Databases
 
+  The reason why I chose this artifact is that I envisioned enhancing it and allowing for the data to be structured and to add a database component to it. Initially, I was planning on giving the user the ability to add several cities however since this is a static dashboard and is meant to display the weather forecast without a lot of end-user interaction, I decided to add a few controls settings. What that means is that now the end-user will have the ability to choose the format and language in which the data will be displayed. I believe that I did meet the objectives of the course as I showcased the ability to design a relational database MySQL and host it on an EC2 instance in AWS. While enhancing this artifact I learned a lot about AWS cloud platform and EC2 instances as well as back end languages such as PHP needed to make the connection between the JavaScript and database. The challenge that I was faced with was accessing the database and also hosting it since I had not done it before. I relied heavily on AWS documentation and learning tutorials. 
 
 ## Finished Artifact
+
+The artifact that I have chosen is a Weather Dashboard that will provide the weather forecast for the end-user based on their location. This was an open-source project that I decided to enhance and add more features to.
 [My Artifact](https:/belezi.github.io/project/index.html)
+
+
