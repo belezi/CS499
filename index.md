@@ -31,7 +31,7 @@ All these tools also including this capstone class have ultimately given me the 
 
 ## Code Review Process
 
-### Code Review Walkthough Video
+### Code Review Walkthrough Video
 
 [Code Review YouTube Link](https://youtu.be/6_0Om5FcPik)
 
