@@ -12,7 +12,19 @@ For my capstone class project I have chosen to work on enhancing a weather dashb
 
 Becoming a part of the todays workforce takes a lot of energy and time however with the family and friends supporting me and SNHU providing an amazing program online gave me the opportunity to remotely go through the program and complete my degree. Looking back and reflecting to the days when i was thinking about joining the program I am glad that i did and not waited much longer. Thoughout this journey at SNHU has been a lot of ups and downs, times when i have doubted myself whether i can do all the work with the little to no time left on the week sometimes since my work would eat up a lot of my day however i have made it thus far thanks to the support system in my life. 
 
-### Program Rerlection
+### Program Reflection
+
+  From the program here at SNHU i have learned a lot on different topics and skills that are essential for the industry such as data structures and algorithms, databases, design, QA and Automation. 
+  
+  Data structures and algorithms course was my favourite because i learned a lot as to how the data and algorithms would make it possible for a program to run and function. I gained a deeper knowledge on algorithms and how to design them to be efficient and support the probplem at hand. 
+  
+  Data structure is also very important because the way how you handle different data points and how they are stored in memory enables one to write algorithms that are precise and concise, eliminating all unnecessary lines of code.
+  
+  Another very interesting course that I took on this program was CS310 where i learned a lot about testing and quality assurance. Being able to write high quality code is important on this line of work however being able to also view your work from a testers point of view has helped me on shipping better code with fewer bugs. 
+  
+  Database course gave me a better understanding of how relational databases work and how to design the tables where the information wil be stored and how they all are linked with each other. 
+  
+  All these tools also including this capstone class have ultimately given me the knowledge and the neccessary skillset to succeed on the workforce market, the ability to build any project no matter how complex and also the ability to learn new skills and tools in the future. 
 
 
 
