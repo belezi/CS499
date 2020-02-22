@@ -2,7 +2,7 @@
 
 For my capstone class project I have chosen to work on enhancing a weather dashboard open source project that I took from GitHub [Weather Dashboard](https://github.com/vlaine/Weather-Forecast-Dashboard).
 
-[My Artifact](https:/belezi.github.io)
+[My Artifact](https:/belezi.github.io/project/index.html)
 
 ## Professional Self-Assesmnet
 
