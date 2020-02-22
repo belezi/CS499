@@ -14,7 +14,6 @@ Becoming a part of the todays workforce takes a lot of energy and time however w
 
 [Code Review YouTube Link](https://youtu.be/6_0Om5FcPik)
 
-{% include youtube.html id="dQw4w9WgXcQ" width="850" height="375" %}
 
 ## Enhancement One
 
